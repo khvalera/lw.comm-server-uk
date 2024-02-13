@@ -1,6 +1,9 @@
-require('dotenv').config();
+const dir_name = __dirname;
+
 //.load({silent: true});
 const path = require('path');
+
+require(path.join(dir_name, '/node_modules/dotenv')).config();
 
 var config = {};
 
@@ -34,6 +37,6 @@ config.jobOnStart = '';
 config.jobOnFinish = '';
 config.jobOnAbort = '';
 
-config.uipath = path.join(__dirname, '/app')
+config.uipath = path.join(dir_name, '/app')
 
 module.exports = config;
